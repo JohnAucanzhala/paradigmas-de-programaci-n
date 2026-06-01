@@ -2,8 +2,7 @@ Sistema de Inventario - ESPE
 
 ## Descripción
 
-Este proyecto es un sistema de gestión de inventario desarrollado con 
-**Spring Boot**, que permite administrar equipos de hardware como PCs, laptops y servidores.
+En el presente trabajo se desarrolla un sistema de gestión de inventario de equipos tecnológicos utilizando Spring Boot. El objetivo principal es implementar una solución que procese grandes volúmenes de datos y comparar dos paradigmas de programación: el enfoque imperativo y el enfoque funcional.
 
 Se aplican paradigmas de programación:
 
@@ -54,6 +53,39 @@ com.espe.inventario
 ---
 
 ##  Ejecución del proyecto
+Implementación Imperativa
+El enfoque imperativo se desarrolló utilizando estructuras tradicionales como bucles for, condicionales if y variables acumuladoras.
+Este enfoque permite un control detallado del flujo del programa, pero genera mayor cantidad de código y es más propenso a errores.
+Imperativo
+<img width="975" height="106" alt="image" src="https://github.com/user-attachments/assets/1e1c6ed1-0c50-4a18-9bb7-1996bf728f48" />
+Implementación Funcional
+El enfoque funcional se implementó utilizando Java Streams API, permitiendo realizar operaciones como filtrado, agrupación y cálculos de forma declarativa.
+Se utilizaron funciones como:
+•	filter
+•	groupingBy
+•	map
+•	reduce
+•	max
+Este enfoque reduce significativamente las líneas de código y mejora la legibilidad.
+<img width="975" height="173" alt="image" src="https://github.com/user-attachments/assets/5e2785fa-f395-4570-90b2-3c3c90a8383a" />
+<img width="975" height="260" alt="image" src="https://github.com/user-attachments/assets/32784fec-03cf-4783-9352-a1ca292bb591" />
+
+El sistema procesó correctamente 10,000 registros de hardware, aplicando los siguientes criterios:
+•	Filtrado por estado ACTIVO
+•	Filtrado por equipos adquiridos en los últimos 5 años
+•	Agrupación por categoría
+•	Cálculo de total y promedio
+•	Identificación del equipo más costoso
+Análisis Comparativo
+Criterio	           Imperativo	         Funcional
+Líneas de código	     Mayor	            Menor
+Legibilidad	           Media	            Alta
+Facilidad de 
+mantenimiento         Baja	              Alta
+Complejidad	           Alta	              Media
+
+El enfoque funcional demuestra ser más eficiente y adecuado para el procesamiento de grandes volúmenes de datos.
+
 
 1. Clonar repositorio:
 
@@ -85,6 +117,6 @@ http://localhost:8080/api/inventario/imperativo
 
 ## Conclusión
 
-Este proyecto nos demuestra la implementación de buenass prácticas
-en desarrollo backend utilizando Spring Boot, así como la aplicación 
-de paradigmas de programación modernos.
+Con este proyecto concluyo que ambos paradigmas permiten resolver el problema planteado, sin embargo, el paradigma funcional ofrece ventajas significativas en términos de legibilidad, mantenimiento y escalabilidad.
+El uso de Java Streams facilita la implementación de soluciones más limpias y eficientes, siendo recomendable para sistemas modernos.
+
